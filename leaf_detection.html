@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAFture IT - Leaf Disease Detection and Monitoring</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="leaf-bg"></div>
+    <header>
+        <h1>CAFture IT!</h1>
+    </header>
+    <div class="container">
+        
+        <div class="card">
+            <div class="input-group">
+                <label for="fileInput">Upload Leaf Image:</label>
+                <input type="file" id="fileInput" accept="image/*">
+            </div>
+            <div class="input-group">
+                <label for="urlInput">Or Enter Image URL:</label>
+                <input type="text" id="urlInput" placeholder="https://example.com/leaf-image.jpg">
+            </div>
+            <center>
+                <button onclick="detectDisease()">Detect Disease</button><br>
+                <h3>or</h3>
+                <div class="loading" id="loading"></div>
+                <div id="result"></div>
+                <img id="imagePreview" src="" alt="Leaf image preview">            
+            </center>
+
+            <center>
+                <button id="startCameraBtn" onclick="startCamera()">Start Camera</button><br><br>
+                <button id="captureAndDetectBtn" onclick="captureAndDetect()" style="display:none;">Capture and Detect Disease</button><br><br>
+                <div class="loading" id="loading"></div>
+                <div id="result"></div>
+                <img id="imagePreview" src="" alt="Leaf image preview" style="display:none;">
+            </center>
+            
+            <video id="videoElement" width="640" height="480" style="display:none;"></video>
+            <canvas id="canvas" style="display:none;"></canvas>
+            
+            <div id="plantDetails" style="display:none;">
+                <h3>Enter Plant Details</h3>
+                <label for="plantName">Plant Name:</label>
+                <input type="text" id="plantName" placeholder="Enter plant name"><br><br>
+                <label for="plantLocation">Location:</label>
+                <input type="text" id="plantLocation" placeholder="Enter plant location"><br><br>
+                <button onclick="saveImage()">Save Image</button>
+            </div>   
+                   
+        </div>
+                        <!--report and statisssssssssssticssssssssssssssssssss-->
+        <div class="card">
+            <div class="input-group">
+                <label>Leaf Disease Report Monitoring</label>
+                <input type=""> <a href="report.html">SEE</a>
+
+            </div>
+            <!--tableeeeeeeeeeeeee -->
+
+
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
